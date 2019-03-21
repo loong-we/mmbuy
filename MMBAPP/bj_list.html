@@ -1,0 +1,145 @@
+<html lang="zh-CN">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+
+
+  <link rel="stylesheet" href="./css/bj_list.css">
+  <script src="./lib/flexible/flexible.js"></script>
+
+ </head>
+
+ <body>
+
+  <div class="mm_container">
+   <!-- 表头 -->
+   <div class="mm_header">
+    <!-- 右边固定，左边自适应 -->
+    <div class="app"><a href="#"></a></div>
+    <div class="title"><a href="#"></a></div>
+   </div>
+
+
+   <!-- 搜索栏 -->
+   <div class="mm_search">
+    <!-- 右边固定，左边自适应 -->
+    <div class="enter">
+     <input type="text" placeholder="请输入你想比价的商品">
+    </div>
+    <div class="search">
+     <button>搜索</button>
+    </div>
+   </div>
+
+
+   <div class="bj_list">
+
+    <!-- 导航条 -->
+    <div class="bj_nav">
+     <ol>
+      <!-- 
+      <li><a href="#">首页></a></li>
+      <li><a href="#">全部分类></a></li>
+      <li class="active">电视></li>
+     -->
+     </ol>
+     <!-- 挖个坑 -->
+
+     <button>筛选</button>
+    </div>
+
+    <!-- 产品栏 -->
+    <div class="bj_product">
+     <ul>
+      <!-- 挖个大坑 -->
+      <!-- <li>
+       <div class="product_left">
+        <img src="./images/categorylist.jpg" alt="">
+       </div>
+       <div class="product_right">
+        <div class="product_datail">凤凰台上凤凰游，凤去台空江自流,凤凰台上凤凰游，凤去台空江自流</div>
+        <p class="product_price">￥1999</p>
+        <div class="product_content">报价<span>评论</span></div>
+       </div>
+
+      </li> -->
+     </ul>
+    </div>
+
+    <!-- 分页 -->
+    <div class="bj_page">
+     <button class="fl">上一页</button>
+     <button class="fr">下一页</button>
+     <select name="page" id="page">
+      <option value="page">1/1</option>
+     </select>
+    </div>
+
+   </div>
+
+
+
+
+
+   <!-- 底部 -->
+   <div class="mm_foot">
+    <div class="foot_sign fl">
+     <a href="#">登录</a>
+    </div>
+    <div class="foot_login fl">
+     <a href="#">注册</a>
+    </div>
+    <div class="toTop">
+     <a href="javascript:;"><i></i>返回顶部</a>
+    </div>
+
+    <!-- 结尾 -->
+    <div class="mm_end">
+     <p class="end_p"><span>手机APP下载</span> 慢慢买手机版<i>--掌上比较平台</i></p>
+     <p>m.manmanbuy.com</p>
+    </div>
+
+   </div>
+  </div>
+
+  <!-- 导航路径 -->
+  <script type="text/html" id="navPath">
+  {{each result v i}}
+   
+      <li><a href="./index.html">首页></a></li>
+      <li><a href="./category.html">全部分类></a></li>
+      <li class="active">{{v.category}}></li>
+  
+   {{/each}}
+  </script>
+
+  <!-- 产品栏 -->
+  <script type="text/html" id="bj_product">
+   {{each result v i}}
+  
+   <li data-id="{{v.productId}}">
+     <div class="product_left">
+      {{@v.productImg}}
+     </div>
+     <div class="product_right">
+      <div class="product_datail">{{v.productName}}</div>
+      <p class="product_price">{{v.productPrice}}</p>
+      <div class="product_content">{{v.productQuote}}<span>{{v.productCom}}</span></div>
+     </div>
+
+    </li>
+
+   {{/each}}
+  </script>
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/Template/template-web.js"></script>
+
+  <script src="./js/commen.js"></script>
+  <script src="./js/bj_list.js"></script>
+ </body>
+
+</html>

@@ -1,0 +1,240 @@
+// 导入normalize 对所有浏览器样式统一
+@import "normalize.less";
+
+// 导入base，在normalize的基础上进行定制，完成对一些样式的重置
+@import "base.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+
+.mm_container{
+ width: 100%;
+//  height: 5000/@base;
+ background-color: #fff;
+ padding-top: 100/@base;
+
+
+}
+a:hover,
+a:active,
+a:visited,
+a:link{
+ text-decoration: none;
+ color: #fff;
+}
+
+ul{
+ list-style: none;
+}
+
+// 表头
+@import "commens/header.less";
+
+// 搜索栏
+@import "commens/search.less";
+
+// 尾部模块
+@import "commens/foot.less";
+
+
+
+.first_brand{
+  // margin-top: 2/@base;
+  background-color: #fff;
+  padding-bottom: 50/@base;
+  >ul{
+   // height: 500/@base;
+   border-top: 2/@base solid #CBCBCB;
+   border-radius: 10/@base;
+   overflow: hidden;
+   background-color: #EFEFEF;
+   .first{
+    width: 100%;
+    height: 82/@base;
+    line-height: 82/@base;
+    padding-left: 30/@base;
+    color: #000629;
+    border-bottom: 2/@base solid #CBCBCB;
+    i{
+     width: 80/@base;
+     height: 80/@base;
+     text-align: center;
+     font-size: 30/@base;
+     color: #696969;
+     transform: scale(1.4,0.9) rotate(90deg);
+     }
+    }
+  }
+ } 
+
+ .bj_nav{
+   padding-left: 20/@base;
+  height: 76/@base;
+  line-height: 76/@base;
+  width: 100%;
+  border-top: 2px solid #CECECE;
+  border-bottom: 2px solid #CECECE;
+  background-color: #F1F1F1;
+  li{
+   color: #000;
+   float: left;
+  //  padding: 0 5/@base;
+   a{
+     width: 100%;
+     height: 100%;
+    display: block;
+    color: #000;
+   }
+  }
+  button{
+   margin-top: 8/@base;
+   float: right;
+   margin-right: 14/@base;
+   width: 124/@base;
+   height: 58/@base;
+   line-height: 58/@base;
+   border-radius: 10/@base;
+   background-color: #ECECEC;
+   box-shadow: 0 0 2/@base 2/@base #B2B2B2;
+   color: #000;
+   -webkit-tap-highlight-color: transparent;
+  }
+ }
+
+ .hot_brand{
+   padding: 20/@base 20/@base;
+   background-color: #F3F3F3;
+   color: #690B00;
+   font-weight: 700;
+   border-bottom: 2px solid #CECECE;
+ }
+ .ten_brand{
+  //  height: 2000/@base;
+  //  background: pink;
+   li{
+     padding: 20/@base 10/@base 25/@base 20/@base;
+     border-bottom: 2px solid #CECECE;
+     .ten_box{
+       float: left;
+       width: 40/@base;
+       height: 40/@base;
+       line-height: 40/@base;
+       text-align: center;
+       color: #fff;
+       border-radius: 5/@base;
+       background-color: #CECECE;
+     }
+     .ten_box.red{
+       background-color: red;
+     }
+     .ten_box.orange{
+       background-color: orange;
+     }
+      .ten_box.lime{
+       background-color: lime;
+     }
+     i{
+       margin-top: 20/@base;
+       transform: scaleY(1.8)
+     }
+     h3{
+       font-size: 30/@base;
+       color: #000;
+       margin-left: 60/@base;
+     }
+     p{
+      margin-left: 60/@base;
+      color: #C9C9C9;       
+     }
+   }
+ }
+ 
+ 
+ .top_brand>ul>li{
+  height: 235/@base;
+  background: #fff;
+  border-bottom: 2/@base solid #CECECE;
+  margin-top: 2/@base;
+  padding: 30/@base;
+  .top_left{
+   float: left;
+   width: 180/@base;
+   height: 180/@base;
+   vertical-align: middle;
+  } 
+  .top_right{
+   padding-left: 210/@base;
+   .top_price{
+    color: #E50B00;
+    padding: 15/@base 0;
+   }
+   .top_content{
+    font-size: 24/@base;
+    color: #9D97A7;
+    span{
+     margin-left: 20/@base;
+    }
+   }
+  }
+ }
+
+ .new_brand>ul>li{
+   padding: 0 20/@base;
+   padding-bottom: 20/@base;
+   border-bottom: 2/@base solid #CECECE;
+  .new_content{
+    height: 235/@base;
+    background: #fff;
+    // border-bottom: 2/@base solid #CECECE;
+    // margin-top: 2/@base;
+    padding: 30/@base 0;
+    .new_left{
+     float: left;
+     width: 180/@base;
+     height: 180/@base;
+     vertical-align: middle;
+    } 
+    .new_right{
+     padding-left: 210/@base;
+     }
+  }
+  .new_comments{
+    // height: 100/@base;
+    border: 2/@base solid #CECECE;
+    padding: 20/@base 20/@base;
+    position: relative;
+    .new_name{
+      font-size: 22/@base;
+      color: #436826;
+      span{
+        float: right;
+        color: #848A9A;
+      }
+    }
+    .new_corner{
+      position: absolute;
+      top: -11/@base;
+      left: 44/@base;
+      background-color: #fff;
+      transform: rotate(-45deg);
+      width: 20/@base;
+      height: 20/@base;
+      border-top: 2/@base solid #CECECE;
+      border-right: 2/@base solid #CECECE;
+    }
+
+  }
+  }
+  .new_brand>ul>li:last-child{
+    border-bottom: none;
+    margin-bottom: 100/@base
+  }
+ 
+
+
+

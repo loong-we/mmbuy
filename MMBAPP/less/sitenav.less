@@ -1,0 +1,82 @@
+// 导入normalize 对所有浏览器样式统一
+@import "normalize.less";
+
+// 导入base，在normalize的基础上进行定制，完成对一些样式的重置
+@import "base.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+
+.sm_container{
+ width: 100%;
+//  height: 5000/@base;
+ background-color: #EFEFEF;
+ padding-top: 90/@base;
+
+
+}
+a:hover,
+a:active,
+a:visited,
+a:link{
+ text-decoration: none;
+ color: #fff;
+}
+
+ul{
+ list-style: none;
+}
+
+// 表头
+@import "commens/sm_header.less";
+
+
+// 尾部模块
+@import "commens/foot.less";
+
+
+.sm_header{
+  background-color: @mmColor;
+}
+
+// 品牌列表
+.sit_brand{
+  width: 100%;
+  // height: 2000/@base;
+  padding: 20/@base 40/@base 40/@base 86/@base;
+  // padding-left: 86/@base;
+  // padding-top: 20/@base;
+  background-color: #fff;
+  li{
+    float: left;
+    height: 90/@base;
+    line-height: 90/@base;
+    padding: 0 20/@base;
+    border: 2/@base solid #C0C0C0;
+    font-size: 32/@base;
+    color: #000;
+    border-radius: 5/@base;
+    background-color: #F4F4F4;
+    margin-right: 20/@base;
+    margin-bottom: 20/@base;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #000;
+      img{
+        float: left;
+        margin-top: 30/@base;
+        margin-right: 16/@base;
+        width: 32/@base;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,193 @@
+// 引入公共部分
+@import "commen.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+.bj_datails{
+ .bj_nav{
+  height: 76/@base;
+  line-height: 76/@base;
+  width: 100%;
+  border-top: 2px solid #CECECE;
+  border-bottom: 2px solid #CECECE;
+  padding-left: 20/@base;
+
+  li{
+   color: #000;
+   float: left;
+   padding: 0 5/@base;
+   a{
+    display: block;
+    color: #000;
+   }
+  }
+  button{
+   margin-top: 8/@base;
+   float: right;
+   margin-right: 14/@base;
+   width: 124/@base;
+   height: 58/@base;
+   line-height: 58/@base;
+   border-radius: 10/@base;
+   background-color: #ECECEC;
+   box-shadow: 0 0 2/@base 2/@base #B2B2B2;
+   color: #000;
+   -webkit-tap-highlight-color: transparent;
+  }
+ }
+ 
+ 
+ .bj_product{
+  height: 504/@base;
+  background-color: #fff;
+  // border-bottom: 1px solid #000;
+  position: relative;
+ 
+  h3{
+   padding: 30/@base;
+   font-size: 32/@base;
+   text-align: center;
+  };
+  img{
+   margin: 0 auto;
+   width: 170/@base;
+   height:  170/@base;
+  }
+  i{
+   position: absolute;
+   width: 80/@base;
+   height: 80/@base;
+   line-height: 80/@base;
+   text-align: center;
+   color: #fff;
+   background-color: #8BC900;
+   border-radius: 40/@base;
+   right: 50/@base;
+   bottom: 35/@base;
+   text-shadow: 0 2/@base 2/@base #000;
+  }
+ }
+ 
+ // 产品信息
+ .bj_info{
+  height: 70/@base;
+  line-height: 70/@base;
+  border-top: 2/@base solid #B12300;
+  border-bottom: 2/@base solid #B12300;
+  .info_left,
+  .info_center,
+  .info_right{
+   width: 33.3%;
+   height: 100%;
+   text-align: center;
+   background-color: #FFC532;
+   border-left:  2/@base solid #B12300;
+   color: #fff;
+  }
+  .info_left{
+   background-color: #FF9711;
+   border-left: none;
+  }
+ }
+ 
+ // 购买
+ .bj_buy{
+  border-bottom: 8/@base solid #747474;
+  background-color: #fff;
+  .gobuy{
+   height: 80/@base;
+   // line-height: 80/@base;
+   margin-top: 10/@base;
+   padding: 30/@base;
+   border-bottom: 2/@base solid #B2B2B2;
+   img{
+    width: 32/@base;
+    height: 32/@base;
+   }
+   a{
+    font-size: 26/@base;
+    color: #000;
+   }
+   // .gobuy_left{
+   //  position: relative;
+   //  padding-left: 60/@base;
+   //  font-size: 32/@base;
+   //  color: #0E0200;
+   //  i{
+   //   position: absolute;
+   //   left: 14/@base;
+   //   top: 24/@base;
+   //   width: 32/@base;
+   //   height: 32/@base;
+   //   background: url("../images/slogo.png");
+   //   background-size: 100% 100%;
+   //  }
+   // }
+   // .gobuy_right{
+   //  margin-right: 10/@base;
+   //  color: #C90000;
+   //  button{
+   //   width: 112/@base;
+   //   height: 50/@base;
+   //   line-height: 50/@base;
+   //   margin-top: 15/@base;
+   //   background-color: #f50;
+   //   color: #fff;
+   //   border-radius: 10/@base;
+   //   -webkit-tap-highlight-color:transparent;
+   //  }
+   // }
+  }
+  p{
+   margin: 20/@base 0;
+   padding-left: 20/@base;
+  }
+ }
+}
+
+
+ // 用户评价
+ .bj_eval{
+  width: 100%;
+  border-top: 4/@base solid #fff;
+  p{
+   text-align: center;
+   height: 62/@base;
+   line-height: 62/@base;
+   color: #192C2B;
+  }
+  ul{
+   background-color: #fff;
+   li{
+    padding: 30/@base 15/@base 10/@base 20/@base;
+    border-bottom: 2/@base solid #C5C5C5;
+    .eval_from{
+     text-align: right;
+    }
+    .eval_content{
+     margin-top: 20/@base;
+     font-size: 22/@base;
+     color: #192C2B;
+    }
+   }
+  }
+  .eval_more{
+   background-color: #fff;
+   padding: 35/@base 16/@base;
+   button{
+    width: 100%;
+    height: 66/@base;
+    border-radius: 10/@base;
+    box-shadow: 0 2/@base 2/@base #666;
+    color: #192C2B;
+    -webkit-tap-highlight-color:transparent;
+ 
+   }
+  }
+ }
+ 

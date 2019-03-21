@@ -1,0 +1,135 @@
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+
+
+    <link rel="stylesheet" href="./css/gsproduct.css">
+    <link rel="stylesheet" href="./lib/animate/animate.css">
+
+    <script src="./lib/flexible/flexible.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="sm_container">
+      <!-- 表头 -->
+      <div class="sm_header">
+        <!-- 右边固定，左边自适应 -->
+        <div class="app"><a href="#"></a></div>
+        <div class="title"><a href="#">凑单品</a></div>
+      </div>
+
+
+      <!-- 导航栏 -->
+      <div class="cd_nav">
+        <ul class="clearfix">
+          <!-- 挖坑 -->
+          <li class="cd_store">
+            <i>京东</i> <span>▼</span>
+          </li>
+          <li class="cd_area">
+            <i>华北</i> <span>▼</span>
+          </li>
+          <li><i>全部价格</i> <span>▼</span></li>
+        </ul>
+        <div class="cd_hid"></div>
+        <!-- 隐藏的列表 -->
+        <div class="cd_hidlist">
+          <div class="cd_hidstore">
+            <ul style="display:none">
+              <!-- style="display:none" -->
+              <!-- 挖个小坑 -->
+            </ul>
+          </div>
+          <div class="cd_hidarea">
+            <ul style="display:none">
+              <!-- 挖个坑 -->
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- 凑单列表 -->
+      <div class="cd_lists">
+        <ul class="clearfix">
+          <!-- 挖个坑 -->
+          <!-- <li>
+            <img src="./images/baby.jpg" alt="">
+            <p>湖人总冠军湖人总冠军湖人总冠军湖人总冠军</p>
+            <div class="cd_price clearfix">
+              ￥666
+              <button>去凑单</button>
+            </div>
+          </li> -->
+        </ul>
+        <!-- 按钮 -->
+        <button>加载更多..</button>
+      </div>
+
+      <!-- 底部 -->
+      <div class="mm_foot">
+        <div class="foot_sign fl">
+          <a href="#">登录</a>
+        </div>
+        <div class="foot_login fl">
+          <a href="#">注册</a>
+        </div>
+        <div class="toTop">
+          <a href="javascript:;"><i></i>返回顶部</a>
+        </div>
+
+        <!-- 结尾 -->
+        <div class="mm_end">
+          <p class="end_p"><span>手机APP下载</span> 慢慢买手机版<i>--掌上比较平台</i></p>
+          <p>m.manmanbuy.com</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 店铺列表 -->
+    <script type="text/html" id="cd_hidstore">
+      {{each result v i}}
+         <li data-id="{{v.shopId}}">
+          {{v.shopName}} <i>√</i>
+         </li>
+      {{/each}}
+    </script>
+
+    <!-- 地区列表 -->
+    <script type="text/html" id="cd_hidarea">
+      {{each result v i}}
+         <li data-id="{{v.areaId}}">
+          {{v.areaName}} <i>√</i>
+         </li>
+      {{/each}}
+    </script>
+
+    <!-- 商家列表的模板 -->
+    <script type="text/html" id="cd_lists">
+   {{each result v i}}
+      <li data-id="{{v.productId}}">
+        <img src="{{v.productImg}}" alt="">
+        <p>{{v.productName}}</p>
+        <div class="cd_price clearfix">
+          {{v.productPrice}}
+          <button>去凑单</button>
+        </div>
+      </li>
+   {{/each}}
+    </script>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./lib/IScroll/iscroll.js"></script>
+    <script src="./js/commen.js"></script>
+    <script src="./js/gsproduct.js"></script>
+  </body>
+
+</html>

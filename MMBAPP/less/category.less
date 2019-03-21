@@ -1,0 +1,65 @@
+// 引入公共部分
+@import "commen.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+
+
+
+
+
+
+.first_menu{
+ background-color: #fff;
+ padding-bottom: 50/@base;
+ >ul{
+  // height: 500/@base;
+  border-top: 2/@base solid #CBCBCB;
+  border-radius: 10/@base;
+  overflow: hidden;
+  background-color: #EFEFEF;
+  .first{
+   width: 100%;
+   height: 82/@base;
+   line-height: 82/@base;
+   padding-left: 30/@base;
+   color: #000629;
+   border-bottom: 2/@base solid #CBCBCB;
+   i{
+    width: 80/@base;
+    height: 80/@base;
+    text-align: center;
+    font-size: 30/@base;
+    color: #696969;
+    transform: scale(1.4,0.9) rotate(90deg);
+    }
+   }
+   ul{
+    background: #fff;
+   }
+   ul li{  
+    width: 33.3%;
+    height: 80/@base;
+    line-height: 80/@base;
+    float: left;
+    border-right: 2/@base solid #CBCBCB;
+    border-bottom: 2/@base solid #CBCBCB;
+    text-align: center;
+    a{
+     color: #000629;
+     display: block;
+     width: 100%;
+     height: 100%;
+    }
+   }
+   ul li:nth-child(3n){
+    border-right: none;
+   }
+
+ }
+} 

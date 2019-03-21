@@ -1,0 +1,101 @@
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+
+
+    <link rel="stylesheet" href="./css/discount.css">
+
+    <script src="./lib/flexible/flexible.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="sm_container">
+      <!-- 表头 -->
+      <div class="sm_header">
+        <!-- 右边固定，左边自适应 -->
+        <div class="app"><a href="#"></a></div>
+        <div class="title"><a href="#">国内折扣</a></div>
+      </div>
+
+      <!-- 产品详情 -->
+      <!-- 评论 -->
+
+      <div class="dis_datails">
+        <!-- 挖个神坑 -->
+      </div>
+
+      <!-- 底部 -->
+      <div class="mm_foot">
+        <div class="foot_sign fl">
+          <a href="#">登录</a>
+        </div>
+        <div class="foot_login fl">
+          <a href="#">注册</a>
+        </div>
+        <div class="toTop">
+          <a href="javascript:;"><i></i>返回顶部</a>
+        </div>
+
+        <!-- 结尾 -->
+        <div class="mm_end">
+          <p class="end_p"><span>手机APP下载</span> 慢慢买手机版<i>--掌上比较平台</i></p>
+          <p>m.manmanbuy.com</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- 详情模板 -->
+    <script type="text/html" id="dis_datails">
+   {{each result v i}}
+  
+    <h3>{{v.productName}}</h3>
+    <div class="dis_price">{{v.productPrice}}</div>
+    <div class="dis_from">{{v.productFrom}}<i>{{v.productTime}}</i> <span>{{v.productTips}}</span></div>
+    <div class="dis_goods">
+      <div class="dis_img"><img src="./images/red.png" alt=""></div>
+      <div class="dis_tw">
+       <p>{{v.productInfo}}</p>
+
+       <div class="sm_bigimg">{{@v.productImg}}</div>
+     </div>
+
+     <div class="dis_citylist">
+      <ul class="clearfix">
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+      </ul>
+     </div>
+     <div class="dis_tobuy">
+      <button>前往购买</button>
+     </div>
+     <div class="dis_erweima">
+      <img src="./images/mmbweixin2.png" alt="">
+     </div>
+    </div>
+    <div class="dis_comment">{{@v.productComment}}</div>
+
+   {{/each}}
+  </script>
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./js/discount.js"></script>
+    <script src="./js/commen.js"></script>
+  </body>
+
+</html>

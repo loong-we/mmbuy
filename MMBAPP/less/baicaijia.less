@@ -1,0 +1,171 @@
+// 导入normalize 对所有浏览器样式统一
+@import "normalize.less";
+
+// 导入base，在normalize的基础上进行定制，完成对一些样式的重置
+@import "base.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+
+.sm_container{
+ width: 100%;
+//  height: 5000/@base;
+ background-color: #EFEFEF;
+ padding-top: 90/@base;
+
+
+}
+a:hover,
+a:active,
+a:visited,
+a:link{
+ text-decoration: none;
+ color: #fff;
+}
+
+ul{
+ list-style: none;
+}
+
+// 表头
+@import "commens/sm_header.less";
+
+
+// 尾部模块
+@import "commens/foot.less";
+
+
+.sm_header{
+  background-color: #F4483E;
+}
+// discount栏
+.bcj_dis{
+ width: 100%;
+ height: 75/@base;
+ background-color: #fff;
+ overflow: hidden;
+ position: relative;
+ padding-right: 80/@base;
+ .warpper{
+   width:100%;
+   ul{
+     width: 100%;
+     li{
+      height: 75/@base;
+      line-height: 75/@base;
+      float: left;
+      border-bottom: 6px solid transparent;
+      margin: 0 24/@base;
+      font-size: 26/@base;
+     }
+     li.current{
+      border-bottom: 6px solid #F4483E;
+      color: #F4483E;
+     }
+   }
+ }
+
+ 
+
+ .bcj_hid{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 80/@base;
+   height: 100%;
+   border-left: 2/@base solid #E3E3E3;
+   background-color: #fff;
+ }
+}
+
+.bcj_list{
+  // height: 2000/@base;
+  margin-bottom: 80/@base;
+  ul li{
+    margin-top: 10/@base;
+    height: 300/@base;
+    background-color: #fff;
+    .bcj_img{
+      width: 280/@base;
+      height: 100%;
+      padding: 20/@base 10/@base;
+      float: left;
+    }
+    h3{
+      padding-top: 15/@base;
+      padding-right: 30/@base;
+      font-size: 26/@base;
+      color: #000;
+      height: 93/@base;
+    }
+    .bcj_coupon{
+      font-size: 34/@base;
+      color: #F4483E;
+      padding-top: 10/@base;
+    }
+    .bcj_res{
+      height: 54/@base;
+      line-height: 54/@base;
+      i{
+        float: left;
+        border: 2/@base solid #F4483E;
+        border-radius: 15/@base;
+        width: 166/@base;
+        position: relative;
+        height: 24/@base;
+        line-height: 24/@base;
+        text-align: center;
+        margin-top: 13/@base;
+        color: #000;
+        overflow: hidden;
+        em{
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          // width: 20/@base;
+          background-color: #F4483E;
+          border-radius: 15/@base;
+        }
+        span{
+          position: absolute;
+        }
+      }
+      b{
+        font-size: 24/@base;
+        color: #F4483E;
+        margin-left: 20/@base;
+      }
+    }
+    .bcj_tobuy{
+      height: 60/@base;
+        .get{
+          float: left;
+          height: 54/@base;
+          line-height: 54/@base;
+          border: 2/@base dashed #F4483E;
+          padding: 0 10/@base;
+          a{
+            color: #F4483E;
+          }
+        }
+        .go{
+          float: right;
+          height: 54/@base;
+          line-height: 50/@base;
+          background-color: #F4483E;
+          border-radius: 10/@base;
+          padding: 0 20/@base;
+          border: 2/@base solid #FF5E5D;
+          margin-right: 12/@base;
+        }
+    }
+  }
+}
+

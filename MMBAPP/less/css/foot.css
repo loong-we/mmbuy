@@ -1,0 +1,46 @@
+.mm_foot {
+  width: 100%;
+  font-size: 0.34666667rem;
+  height: 0.93333333rem;
+  line-height: 0.93333333rem;
+  text-align: center;
+  border-bottom: 2px solid #908D93;
+  border-top: 2px solid #908D93;
+}
+.mm_foot a {
+  color: #0D0200;
+}
+.mm_foot .foot_sign {
+  width: 3rem;
+  border-right: 2px solid #908D93;
+}
+.mm_foot .foot_login {
+  width: 3rem;
+  border-right: 2px solid #908D93;
+}
+.mm_foot .toTop {
+  padding-left: 0.26666667rem;
+  position: relative;
+}
+.mm_foot .toTop i {
+  position: absolute;
+  top: 28%;
+  left: 68%;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url("../images/top.jpg");
+  background-size: 100% 100%;
+}
+.mm_end {
+  margin-top: 0.4rem;
+}
+.mm_end .end_p {
+  font-size: 0.34666667rem;
+  color: #0C0A06;
+}
+.mm_end .end_p span {
+  color: #FF0004;
+}
+.mm_end .end_p i {
+  color: #635D76;
+}

@@ -1,0 +1,102 @@
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+
+
+    <link rel="stylesheet" href="./css/couponproduct.css">
+    <link rel="stylesheet" href="./lib/animate/animate.css">
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+
+    <script src="./lib/flexible/flexible.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="sm_container">
+      <!-- 表头 -->
+      <div class="sm_header">
+        <!-- 右边固定，左边自适应 -->
+        <div class="app"><a href="#"></a></div>
+        <div class="title"><a href="#">优惠券</a></div>
+      </div>
+
+      <!-- 提示栏 -->
+      <div class="cp_tip">
+        <p class="animated swing">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+      </div>
+
+      <!-- 商家列表 -->
+      <div class="cp_contents">
+        <ul class="clearfix">
+          <!-- 挖个坑 -->
+        </ul>
+      </div>
+      
+
+      <!-- 模态框 -->
+      <div class="cp_modal" style="display:none">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/haitao.png" alt=""></div>
+            <div class="swiper-slide"><img src="./images/ic_cu.png" alt=""></div>
+            <div class="swiper-slide"><img src="./images/ic_mall.png" alt=""></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <!--左箭头-->
+          <div class="swiper-button-next"></div>
+          <!--右箭头-->
+        </div>
+      </div>
+
+
+      <!-- 底部 -->
+      <div class="mm_foot">
+        <div class="foot_sign fl">
+          <a href="#">登录</a>
+        </div>
+        <div class="foot_login fl">
+          <a href="#">注册</a>
+        </div>
+        <div class="toTop">
+          <a href="javascript:;"><i></i>返回顶部</a>
+        </div>
+
+        <!-- 结尾 -->
+        <div class="mm_end">
+          <p class="end_p"><span>手机APP下载</span> 慢慢买手机版<i>--掌上比较平台</i></p>
+          <p>m.manmanbuy.com</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- 商家列表的模板 -->
+    <script type="text/html" id="cp_contents">
+   {{each result v i}}
+      <li data-id="{{v.couponProductId}}">
+        <div class="contents_left">
+          {{@v.couponProductImg}}
+        </div>
+        <div class="contents_right">
+          <div class="contents_datail">{{v.couponProductName}}</div>
+          <p class="contents_price">{{v.couponProductPrice}}</p>
+          <div class="contents_content">{{v.couponProductTime}}</div>
+        </div>
+      </li>
+   {{/each}}
+    </script>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./lib/IScroll/iscroll.js"></script>
+    <script src="./lib/swiper/js/swiper.js"></script>
+    <script src="./js/commen.js"></script>
+    <script src="./js/couponproduct.js"></script>
+  </body>
+
+</html>

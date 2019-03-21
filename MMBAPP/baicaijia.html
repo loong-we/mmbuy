@@ -1,0 +1,123 @@
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+
+
+    <link rel="stylesheet" href="./css/baicaijia.css">
+
+    <script src="./lib/flexible/flexible.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="sm_container">
+      <!-- 表头 -->
+      <div class="sm_header">
+        <!-- 右边固定，左边自适应 -->
+        <div class="app"><a href="#"></a></div>
+        <div class="title"><a href="#">白菜价-淘宝内部价</a></div>
+      </div>
+
+
+
+
+      <!-- 导航栏 -->
+      <div class="bcj_dis">
+        <div class="warpper">
+          <ul>
+            <!-- <li class="current">全部</li> -->
+          </ul>
+        </div>
+        <div class="bcj_hid"></div>
+      </div>
+
+      <!-- 产品列表 -->
+      <div class="bcj_list">
+        <ul>
+          <!-- 挖个大坑 -->
+          <!-- <li>
+            <div class="bcj_img">
+              <img src="./images/ic_cu.png" alt="">
+            </div>
+            <div class="bcj_datail">
+              <h3>[包邮]</span>车内车载空气净化器除异味甲醛烟味</h3>
+              <div class="bcj_coupon">
+                <p><i>券后</i><em>¥</em>10.0<del>¥25</del></p>
+              </div>
+              <div class="bcj_res">
+                <div class="bar clearfix"><a href="https://shop.m.taobao.com/shop/coupon.htm?&amp;sellerId=356601422&amp;activityId=0e654846c6c94c9e84123ae597fcd237"
+                    class="goquan" target="_blank"></a><i><em style="width:6%;"></em><span>6%</span></i><b>已领320张</b></div>
+              </div>
+              <div class="bcj_tobuy clearfix">
+                <div class="get"><a href="#">点此领30元优惠券</a></div>
+                <div class="go"><a href="#">下单链接</a></div>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+
+      <!-- 底部 -->
+      <div class="mm_foot">
+        <div class="foot_sign fl">
+          <a href="#">登录</a>
+        </div>
+        <div class="foot_login fl">
+          <a href="#">注册</a>
+        </div>
+        <div class="toTop">
+          <a href="javascript:;"><i></i>返回顶部</a>
+        </div>
+
+        <!-- 结尾 -->
+        <div class="mm_end">
+          <p class="end_p"><span>手机APP下载</span> 慢慢买手机版<i>--掌上比较平台</i></p>
+          <p>m.manmanbuy.com</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 导航栏的模板 -->
+    <script type="text/html" id="bcj_dis">
+      {{each result v i}}
+      <li data-id="{{v.titleId}}">{{v.title}}</li>
+      {{/each}}
+    </script>
+
+    <!-- 列表的模板 -->
+    <script type="text/html" id="bcj_list">
+   {{each result v i}}
+    <li data-id="{{v.productId}}">
+        <div class="bcj_img">
+          {{@v.productImg}}
+        </div>
+        <div class="bcj_datail">
+          <h3>{{@v.productName}}</h3>
+          <div class="bcj_coupon">
+            {{@v.productPrice}}
+          </div>
+          <div class="bcj_res">
+            {{@v.productCouponRemain}}
+          </div>
+          <div class="bcj_tobuy clearfix">
+            <div class="get">{{@v.productCoupon}}</div>
+            <div class="go">{{@v.productHref}}</div>
+          </div>
+        </div>
+      </li>
+   {{/each}}
+    </script>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./lib/IScroll/iscroll.js"></script>
+    <script src="./js/commen.js"></script>
+    <script src="./js/baicaijia.js"></script>
+  </body>
+
+</html>

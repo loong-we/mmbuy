@@ -1,0 +1,82 @@
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+
+
+    <link rel="stylesheet" href="./css/sitenav.css">
+
+    <script src="./lib/flexible/flexible.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="sm_container">
+      <!-- 表头 -->
+      <div class="sm_header">
+        <!-- 右边固定，左边自适应 -->
+        <div class="app"><a href="#"></a></div>
+        <div class="title"><a href="#">商场导航</a></div>
+      </div>
+
+
+      <!-- 品牌列表 -->
+      <div class="sit_brand">
+        <ul class="clearfix">
+          <!-- 挖坑 -->
+          <!-- <li>
+            <img src="./images/360.png" alt="">
+            京东商城
+          </li> -->
+        </ul>
+      </div>
+
+
+
+
+      <!-- 底部 -->
+      <div class="mm_foot">
+        <div class="foot_sign fl">
+          <a href="#">登录</a>
+        </div>
+        <div class="foot_login fl">
+          <a href="#">注册</a>
+        </div>
+        <div class="toTop">
+          <a href="javascript:;"><i></i>返回顶部</a>
+        </div>
+
+        <!-- 结尾 -->
+        <div class="mm_end">
+          <p class="end_p"><span>手机APP下载</span> 慢慢买手机版<i>--掌上比较平台</i></p>
+          <p>m.manmanbuy.com</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 店铺列表 -->
+    <script type="text/html" id="sit_brand">
+      {{each result v i}}
+         <li data-id="{{v.navId}}">
+          <a href="{{v.navHref}}">
+            <img src="{{v.navImg}}" alt="">
+            {{v.navTitle}}
+          </a>
+         </li>
+      {{/each}}
+    </script>
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./lib/IScroll/iscroll.js"></script>
+    <script src="./js/commen.js"></script>
+    <script src="./js/sitenav.js"></script>
+  </body>
+
+</html>

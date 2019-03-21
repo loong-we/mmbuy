@@ -1,0 +1,101 @@
+<html lang="zh-CN">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+
+
+  <link rel="stylesheet" href="./css/category.css">
+  <!-- <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"> -->
+  <script src="./lib/flexible/flexible.js"></script>
+
+ </head>
+
+ <body>
+
+  <div class="mm_container">
+   <!-- 表头 -->
+   <div class="mm_header">
+    <!-- 右边固定，左边自适应 -->
+    <div class="app"><a href="#"></a></div>
+    <div class="title"><a href="#"></a></div>
+   </div>
+
+
+   <!-- 搜索栏 -->
+   <div class="mm_search">
+    <!-- 右边固定，左边自适应 -->
+    <div class="enter">
+     <input type="text" placeholder="请输入你想比价的商品">
+    </div>
+    <div class="search">
+     <button>搜索</button>
+    </div>
+   </div>
+
+   <!-- 菜单 -->
+   <div class="first_menu">
+    <ul>
+
+     <!-- 坑 -->
+
+    </ul>
+   </div>
+
+
+
+
+
+   <!-- 底部 -->
+   <div class="mm_foot">
+    <div class="foot_sign fl">
+     <a href="#">登录</a>
+    </div>
+    <div class="foot_login fl">
+     <a href="#">注册</a>
+    </div>
+    <div class="toTop">
+     <a href="javascript:;"><i></i>返回顶部</a>
+    </div>
+
+    <!-- 结尾 -->
+    <div class="mm_end">
+     <p class="end_p"><span>手机APP下载</span> 慢慢买手机版<i>--掌上比较平台</i></p>
+     <p>m.manmanbuy.com</p>
+    </div>
+
+   </div>
+  </div>
+
+  <!-- 一级菜单的模板 -->
+  <script type="text/html" id="first-menu">
+   {{each result v i}}
+   <li>
+     <div class="first"><span>{{v.title}}</span><i class="fr"  data-id="{{v.titleId}}">></i></div>
+     <ul class="clearfix second" style="display:none">
+     </ul>
+    </li>
+   {{/each}}
+  </script>
+
+
+  <!-- 二级菜单的模板 -->
+  <script type="text/html" id="second-menu">
+   {{each result v i}}
+
+    <li><a href="./bj_list.html?{{v.categoryId}}">{{v.category}}</a></li>
+
+   {{/each}}
+  </script>
+
+
+  <!-- <script src="./lib/zepto/zepto.min.js"></script> -->
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/Template/template-web.js"></script>
+
+  <script src="./js/commen.js"></script>
+  <script src="./js/category.js"></script>
+ </body>
+
+</html>

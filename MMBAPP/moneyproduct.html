@@ -1,0 +1,144 @@
+<html lang="zh-CN">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <title>慢慢买</title>
+
+
+      <link rel="stylesheet" href="./css/moneyproduct.css">
+
+      <script src="./lib/flexible/flexible.js"></script>
+
+   </head>
+
+   <body>
+
+      <div class="sm_container">
+         <!-- 表头 -->
+         <div class="sm_header">
+            <!-- 右边固定，左边自适应 -->
+            <div class="app"><a href="#"></a></div>
+            <div class="title"><a href="#">国内折扣</a></div>
+         </div>
+
+         <!-- 产品详情 -->
+         <!-- <div class="sm_datails">
+    <h3>移动端凑单：海天至尊宇宙第一家酱油</h3>
+    <div class="sm_from">京东商城 <i>10-25 10:26</i> <span>小编/烟火</span></div>
+    <div class="sm_goods">
+     <div class="sm_img"><img src="./images/mnav.jpg" alt=""></div>
+     <p>这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油这是一瓶好酱油</p>
+     <div class="sm_bigimg"><img src="./images/product.jpg" alt=""></div>
+     <div class="sm_citylist">
+      <ul>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+      </ul>
+     </div>
+     <div class="sm_tobuy">
+      <button>前往购买</button>
+     </div>
+     <div class="sm_erweima">
+      <img src="./images/mmbweixin2.png" alt="">
+     </div>
+    </div>
+   </div> -->
+
+         <!-- 评论 -->
+         <!-- <div class="sm_comment"></div> -->
+
+         <div class="sm_datails">
+            <!-- 挖个神坑 -->
+         </div>
+
+         <!-- 底部 -->
+         <div class="mm_foot">
+            <div class="foot_sign fl">
+               <a href="#">登录</a>
+            </div>
+            <div class="foot_login fl">
+               <a href="#">注册</a>
+            </div>
+            <div class="toTop">
+               <a href="javascript:;"><i></i>返回顶部</a>
+            </div>
+
+            <!-- 结尾 -->
+            <div class="mm_end">
+               <p class="end_p"><span>手机APP下载</span> 慢慢买手机版<i>--掌上比较平台</i></p>
+               <p>m.manmanbuy.com</p>
+            </div>
+
+         </div>
+      </div>
+
+
+      <!-- 详情模板 -->
+      <script type="text/html" id="sm_datails">
+   {{each result v i}}
+  
+    <h3>{{v.productName}}</h3>
+    <div class="sm_from">{{v.productFrom}}<i>{{v.productTime}}</i> <span>{{v.productTips}}</span></div>
+    <div class="sm_goods">
+     <div class="sm_tw">
+       <div class="sm_img">{{@v.productImgSm}}</div>
+     
+       {{if v.productInfo !=""}}
+       <p>{{v.productInfo}}</p>
+       {{else if v.productInfo1 !=""}}
+       <p>{{v.productInfo1}}</p>
+       {{else}}
+       <p>{{v.productInfo2}}</p>
+       {{/if}}
+     </div>
+
+     {{if v.productImgLg !=""}}
+     <div class="sm_bigimg">{{@v.productImgLg}}</div>
+     {{else if v.productImg2 !=""}}
+     <div class="sm_bigimg">{{@v.productImg2}}</div>
+     {{else}}
+     <div class="sm_bigimg">{{@v.productImg3}}</div>
+     {{/if}}
+
+
+
+     <!-- <div class="sm_bigimg" style="display:{{v.productImgLg==""?"none":""}}">{{@v.productImgLg}}</div>
+     <div class="sm_bigimg" style="display:{{v.productImg2==""?"none":""}}">{{@v.productImg2}}</div>
+     <div class="sm_bigimg" style="display:{{v.productImg3==""?"none":""}}">{{@v.productImg3}}</div> -->
+
+     <div class="sm_citylist">
+      <ul class="clearfix">
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+       <li><span class="fl">北京</span><span class="fr">诱惑</span></li>
+      </ul>
+     </div>
+     <div class="sm_tobuy">
+      <button>前往购买</button>
+     </div>
+     <div class="sm_erweima">
+      <img src="./images/mmbweixin2.png" alt="">
+     </div>
+    </div>
+    <div class="sm_comment">{{@v.productComment}}</div>
+
+   {{/each}}
+  </script>
+
+
+
+      <script src="./lib/jquery/jquery.min.js"></script>
+      <script src="./lib/Template/template-web.js"></script>
+      <script src="./js/moneyproduct.js"></script>
+      <script src="./js/commen.js"></script>
+   </body>
+
+</html>

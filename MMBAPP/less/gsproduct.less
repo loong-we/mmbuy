@@ -1,0 +1,153 @@
+// 导入normalize 对所有浏览器样式统一
+@import "normalize.less";
+
+// 导入base，在normalize的基础上进行定制，完成对一些样式的重置
+@import "base.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+
+.sm_container{
+ width: 100%;
+//  height: 5000/@base;
+ background-color: #EFEFEF;
+ padding-top: 90/@base;
+
+
+}
+a:hover,
+a:active,
+a:visited,
+a:link{
+ text-decoration: none;
+ color: #fff;
+}
+
+ul{
+ list-style: none;
+}
+
+// 表头
+@import "commens/sm_header.less";
+
+
+// 尾部模块
+@import "commens/foot.less";
+
+
+.sm_header{
+  background-color: @mmColor;
+}               
+
+// 导航栏
+.cd_nav{
+  background-color: #fff;
+  position: relative;
+  padding-right: 90/@base;
+  border-bottom: 2/@base solid #919292;
+  position: relative;
+  ul>li{
+    float: left;
+    padding: 0 20/@base;
+    text-align: left;
+    height: 75/@base;
+    line-height: 75/@base;
+    width: 220/@base;
+    font-size: 30/@base;
+    position: relative;
+    span.rotate{
+      display: inline-block;
+      // transform-origin: center center;
+      transform: rotate(180deg);
+    }
+    
+  }
+  .cd_hid{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90/@base;
+    height: 100%;
+    border-left: 2/@base solid #919292;
+  }
+  .cd_hidlist{
+    position: absolute;
+    top: 77/@base;
+    left: 0;
+    ul  li{
+        text-align-last: left;
+        height: 80/@base;
+        width: 750/@base;
+        background-color: #fff;
+        border-bottom: 2/@base solid #ccc;
+        i{
+          float: right;
+          color: transparent;
+          font-family: "微软雅黑";
+          font-weight: 700;
+          transform: scale(2,1.5);
+        }
+        i.active{
+          color: red;
+        }
+      }
+    }
+  }
+
+
+
+// 凑单列表
+.cd_lists{
+  padding-top: 20/@base;
+  padding-left: 16/@base;
+  margin-bottom: 100/@base;
+  ul li{
+    float: left;
+    width: 354/@base;
+    background-color: #fff;
+    padding: 0 10/@base;
+    margin-right: 10/@base;
+    margin-bottom: 15/@base;
+    p{
+      height: 36/@base;
+      font-size: 26/@base;
+      overflow: hidden;
+    }
+    .cd_price{
+      height: 72/@base;
+      line-height: 72/@base;
+      color: #E50B00;
+      font-size: 30/@base;
+      button{
+        float: right;
+        width: 125/@base;
+        height: 58/@base;
+        line-height: 58/@base;
+        background-color: @mmColor;
+        margin-top: 7/@base;
+        color: #fff;
+        border-radius: 10/@base;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  }
+  >button{
+    display: block;
+    margin: 0 auto;
+    width: 200/@base;
+    height: 60/@base;
+    line-height: 40/@base;
+    border: 2/@base solid #919292;
+    border-radius: 10/@base;
+    background-color: #919292;
+    color: #000;
+    -webkit-tap-highlight-color: transparent
+  }
+}
+
+

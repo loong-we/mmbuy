@@ -1,0 +1,96 @@
+// 引入公共部分
+@import "commen.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+.bj_list{
+ // height: 2000/@base;
+ margin-bottom: 40/@base;
+ .bj_nav{
+  height: 76/@base;
+  line-height: 76/@base;
+  width: 100%;
+  border-top: 2px solid #CECECE;
+  border-bottom: 2px solid #CECECE;
+  padding-left: 20/@base;
+
+  li{
+   color: #000;
+   float: left;
+   padding: 0 5/@base;
+   a{
+    display: block;
+    color: #000;
+   }
+  }
+  button{
+   margin-top: 8/@base;
+   float: right;
+   margin-right: 14/@base;
+   width: 124/@base;
+   height: 58/@base;
+   line-height: 58/@base;
+   border-radius: 10/@base;
+   background-color: #ECECEC;
+   box-shadow: 0 0 2/@base 2/@base #B2B2B2;
+   color: #000;
+   -webkit-tap-highlight-color: transparent;
+  }
+ }
+
+ .bj_product>ul>li{
+  height: 235/@base;
+  background: #fff;
+  border-bottom: 2/@base solid #CECECE;
+  margin-top: 2/@base;
+  padding: 30/@base;
+  .product_left{
+   float: left;
+   width: 180/@base;
+   height: 180/@base;
+   vertical-align: middle;
+  } 
+  .product_right{
+   padding-left: 210/@base;
+   .product_price{
+    color: #E50B00;
+    padding: 15/@base 0;
+   }
+   .product_content{
+    font-size: 24/@base;
+    color: #9D97A7;
+    span{
+     margin-left: 20/@base;
+    }
+   }
+  }
+ }
+
+ .bj_page{
+  height: 95/@base;
+  background-color: #fff;
+  padding: 20/@base  40/@base 0;
+  text-align: center;
+  button{
+   width: 170/@base;
+   height: 70/@base;
+   border-radius: 10/@base;
+   box-shadow: 0 2/@base 2/@base #666;
+   color: #000;
+   -webkit-tap-highlight-color: transparent;
+  }
+  select{
+   width: 120/@base;
+   height: 70/@base;
+   // text-align: center;
+   font-size: 30/@base;
+  }
+ }
+
+ 
+}

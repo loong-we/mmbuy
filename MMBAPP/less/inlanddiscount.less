@@ -1,0 +1,93 @@
+// 导入normalize 对所有浏览器样式统一
+@import "normalize.less";
+
+// 导入base，在normalize的基础上进行定制，完成对一些样式的重置
+@import "base.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+
+.sm_container{
+ width: 100%;
+ // height: 5000/@base;
+ background-color: #EFEFEF;
+ padding-top: 90/@base;
+
+
+}
+a:hover,
+a:active,
+a:visited,
+a:link{
+ text-decoration: none;
+ color: #fff;
+}
+
+ul{
+ list-style: none;
+}
+
+// 表头
+@import "commens/sm_header.less";
+
+
+// 尾部模块
+@import "commens/foot.less";
+
+
+
+//折扣列表
+.sm_dislist{
+ width: 100%;
+//  height: 1000/@base;
+ background-color: #fff;
+ padding-bottom: 70/@base;
+ // margin-top: 10/@base;
+
+ul{
+  width: 100%;
+  li{
+    // height: 256/@base;
+    width: 50%;
+    border-bottom: 1px solid #908D93;
+    border-right: 1px solid #908D93;
+    padding: 30/@base 35/@base 0;
+    float: left;
+    font-size: 24/@base;
+    
+    .listimg{
+     width: 100%;
+     height: 310/@base;
+    }
+    .listname{
+      // font-size: 26/@base;
+      color: #000;
+      height: 78/@base;
+      overflow: hidden;
+    }
+    .listprice{
+      // font-size: 26/@base;
+      height: 42/@base;
+      color: @mmColor;
+      overflow: hidden;
+    }
+    .listcontent{
+      // font-size: 26/@base;
+      padding: 20/@base 0;
+      color: #B1A09D;
+      height: 66/@base;
+    }
+  
+   }
+  li:nth-child(2n){
+    border-right: none;
+  }
+}
+}
+
+

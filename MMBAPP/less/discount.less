@@ -1,0 +1,144 @@
+// 导入normalize 对所有浏览器样式统一
+@import "normalize.less";
+
+// 导入base，在normalize的基础上进行定制，完成对一些样式的重置
+@import "base.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+
+.sm_container{
+ width: 100%;
+//  height: 5000/@base;
+ background-color: #fff;
+ padding-top: 90/@base;
+
+
+}
+a:hover,
+a:active,
+a:visited,
+a:link{
+ text-decoration: none;
+ color: #fff;
+}
+
+ul{
+ list-style: none;
+}
+
+// 表头
+@import "commens/sm_header.less";
+
+
+// 尾部模块
+@import "commens/foot.less";
+
+// 内容部分
+.dis_datails{
+ padding: 0 30/@base;
+ h3{
+  font-size: 38/@base;
+  margin-top: 30/@base;
+  color: #000;
+ }
+ .dis_price{
+   color: @mmColor;
+   font-size: 28/@base;
+ }
+ .dis_from{
+  margin-top: 35/@base;
+  font-size: 24/@base;
+ }
+ .dis_goods{
+  min-height: 335/@base;
+  // width: 200/@base;
+  margin-top: 40/@base;
+  width: 100%;
+  .dis_img{
+   height: 335/@base;
+   width: 255/@base;
+    float: right;
+ }
+  .dis_tw{
+     min-height: 335/@base;
+     padding-right: 270/@base;
+     .dis_bigimg{
+      width: 100%;
+      height: 690/@base;
+     }
+  }
+  .dis_citylist{
+   width: 270/@base;
+   margin: 0 auto;
+   // margin-top: 160/@base;
+   background-color: #fff;
+   padding-bottom: 20/@base;
+   box-shadow: 2/@base 2/@base 2/@base #ccc,
+   -2/@base 0 2/@base #ccc;
+   ul{
+    width: 100%;
+    padding: 0 20/@base;
+    li{
+     height: 42/@base;
+     width: 100%;
+     border-bottom: 2/@base dashed #ccc;
+     padding: 0 20/@base;
+     .fr{
+      color: @mmColor;
+     }
+    }
+   }
+  }
+  .dis_tobuy{
+   margin-top: 38/@base;
+   height: 60/@base;
+   padding: 0 40/@base;
+   button{
+    width: 100%;
+    height: 100%;
+    line-height: 60/@base;
+    background-color: @mmColor;
+    color: #fff;
+    border-radius: 10/@base;
+    text-align: center;
+    font-size: 26/@base;
+   }
+  }
+  .dis_erweima{
+   margin-top: 85/@base;
+  }
+ }
+ // 评论
+ .dis_comment{
+  margin-top: 30/@base;
+  img{
+   width: 120/@base;
+  }
+  .reply{
+     .form{
+         border: 2px solid #ccc;
+         textarea{
+            width: 100%;
+         }
+        .ctrl{
+           text-align: right;
+           border-top: 2px solid #ccc;
+           background-color: #FBFBFB;
+           input{
+              background-color: @mmColor;
+              color: #fff;
+              width: 200/@base;
+              height: 75/@base;
+              -webkit-tap-highlight-color: transparent
+           }
+        }
+     }
+  }
+ }
+}

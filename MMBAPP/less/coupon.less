@@ -1,0 +1,75 @@
+// 导入normalize 对所有浏览器样式统一
+@import "normalize.less";
+
+// 导入base，在normalize的基础上进行定制，完成对一些样式的重置
+@import "base.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+
+.sm_container{
+ width: 100%;
+//  height: 5000/@base;
+ background-color: #EFEFEF;
+ padding-top: 90/@base;
+
+
+}
+a:hover,
+a:active,
+a:visited,
+a:link{
+ text-decoration: none;
+ color: #fff;
+}
+
+ul{
+ list-style: none;
+}
+
+// 表头
+@import "commens/sm_header.less";
+
+
+// 尾部模块
+@import "commens/foot.less";
+
+
+.sm_header{
+  background-color: #F4483E;
+}
+
+
+// 商家列表
+.cp_list{
+  padding-top: 30/@base;
+  padding-left: 10/@base;
+  padding-bottom: 200/@base;
+  // height: 2000/@base;
+  background-color: #fff;
+  ul li{
+    width: 236/@base;
+    height: 150/@base;
+    padding-top: 10/@base;
+    margin-right: 10/@base;
+    margin-bottom: 10/@base;
+    float: left;
+    border: 2/@base solid #ccc;
+    // border-radius: 5/@base;
+    .cp_img{
+      width: 104/@base;
+      height: 104/@base;
+      margin: 0 auto;
+    }
+    p{
+      text-align: center;
+      font-size: 24/@base;
+      color: #000;
+    }
+  }
+}

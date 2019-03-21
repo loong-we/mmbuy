@@ -1,0 +1,124 @@
+// 导入normalize 对所有浏览器样式统一
+@import "normalize.less";
+
+// 导入base，在normalize的基础上进行定制，完成对一些样式的重置
+@import "base.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+
+.sm_container{
+ width: 100%;
+//  height: 5000/@base;
+ background-color: #EFEFEF;
+ padding-top: 90/@base;
+
+
+}
+a:hover,
+a:active,
+a:visited,
+a:link{
+ text-decoration: none;
+ color: #fff;
+}
+
+ul{
+ list-style: none;
+}
+
+// 表头
+@import "commens/sm_header.less";
+
+
+// 尾部模块
+@import "commens/foot.less";
+
+
+.sm_header{
+  background-color: #F4483E;
+}
+
+// 提示栏
+.cp_tip{
+  height: 60/@base;
+  line-height: 60/@base;
+  text-align: center;
+  background-color: #fff;
+  color: #919292;
+  
+}
+
+// 商家列表
+.cp_contents>ul>li{
+  // height: 235/@base;
+  min-height: 206/@base;
+  background: #fff;
+  border-bottom: 2/@base solid #CECECE;
+  margin-top: 2/@base;
+  padding: 20/@base 35/@base 30/@base 20/@base;
+  .contents_left{
+    float: left;
+    width: 180/@base;
+    height: 180/@base;
+    vertical-align: middle;
+  } 
+  .contents_right{
+    padding-left: 210/@base;
+    .contents_price{
+    color: #000;
+    padding: 10/@base 0;
+    font-size: 24/@base;
+    }
+    .contents_content{
+    font-size: 24/@base;
+    color: @mmColor;
+    padding-top: 20/@base;
+    }
+  }
+  }
+
+
+  // 模态框
+  .cp_modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    .swiper-container{
+      margin-top: 150/@base;
+      width: 50%;
+      position: relative;
+      img{
+        width: 60%;
+        margin: 0 auto;
+      }
+      .swiper-button-prev,
+      .swiper-button-next{
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 19%;
+        width: 40/@base;
+        height: 60/@base;
+        background-color: #333;
+        color: #ccc;
+        border-radius: 10/@base;
+        // -webkit-tap-highlight-color: transparent;
+      }
+      .swiper-button-prev{
+        left: 0;
+      }
+      .swiper-button-next{
+        left: 334/@base;
+      }
+    }
+  }

@@ -1,0 +1,148 @@
+<html lang="zh-CN">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+
+
+  <link rel="stylesheet" href="./css/bj_productlist.css">
+  <!-- <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"> -->
+  <script src="./lib/flexible/flexible.js"></script>
+
+ </head>
+
+ <body>
+
+  <div class="mm_container">
+   <!-- 表头 -->
+   <div class="mm_header">
+    <!-- 右边固定，左边自适应 -->
+    <div class="app"><a href="#"></a></div>
+    <div class="title"><a href="#"></a></div>
+   </div>
+
+
+   <!-- 搜索栏 -->
+   <div class="mm_search">
+    <!-- 右边固定，左边自适应 -->
+    <div class="enter">
+     <input type="text" placeholder="请输入你想比价的商品">
+    </div>
+    <div class="search">
+     <button>搜索</button>
+    </div>
+   </div>
+
+
+   <div class="bj_datails">
+    <!-- 巨坑 -->
+
+   </div>
+
+
+   <!-- 用户评价 -->
+   <div class="bj_eval">
+    <p>网友评价</p>
+    <ul>
+     <!-- 挖个坑 -->
+    </ul>
+    <div class="eval_more">
+     <button>查看更多评价</button>
+    </div>
+   </div>
+
+
+   <!-- 底部 -->
+   <div class="mm_foot">
+    <div class="foot_sign fl">
+     <a href="#">登录</a>
+    </div>
+    <div class="foot_login fl">
+     <a href="#">注册</a>
+    </div>
+    <div class="toTop">
+     <a href="javascript:;"><i></i>返回顶部</a>
+    </div>
+
+    <!-- 结尾 -->
+    <div class="mm_end">
+     <p class="end_p"><span>手机APP下载</span> 慢慢买手机版<i>--掌上比较平台</i></p>
+     <p>m.manmanbuy.com</p>
+    </div>
+
+   </div>
+  </div>
+
+
+  <script type="text/html" id="details">
+   {{each result v i}}
+   
+   <div class="bj_nav">
+    <ol>
+     <li><a href="./index.html">首页></a></li>
+     <li><a href="./category.html">全部分类></a></li>
+     <li class="active" data-id="{{v.categoryId}}">{{v.productName.slice(0,4)}}></li>
+    </ol>
+    <button>筛选</button>
+   </div>
+   
+   
+   <div class="bj_product">
+    <h3>{{v.productName}}</h3>
+       {{@v.productImg}} 
+
+      <i>收藏</i>
+     </div>
+  
+   
+     <div class="bj_info">
+      <div class="info_left fl">比较购买</div>
+      <div class="info_center fl">产品参数</div>
+      <div class="info_right fr">评价（2322）</div>
+     </div>
+  
+   
+     <div class="bj_buy">
+      <div class="gobuy">
+       <!-- <div class="gobuy_left fl"> -->
+        <!-- <i></i>
+        京东商城
+       </div>
+       <div class="gobuy_right fr">
+        ￥1999.00
+        <button>去购买</button> -->
+       <!-- </div> -->
+       {{@v.bjShop}}
+      </div>
+      <p>*昨夜雨疏风骤,浓睡不消残酒,试问卷帘人,却道海棠依旧,知否知否,应是绿肥红瘦</p>
+     </div>
+
+   {{/each}}
+  </script>
+
+
+  <script type="text/html" id="bj_comments">
+   {{each result v i}}
+  
+   <li>
+     <div class="eval_data clearfix">
+      <span class="fl">{{v.comName}}</span>
+      <span class="fr">{{v.comTime}}</span>
+     </div>
+     <div class="eval_from">
+      {{v.comFrom}}
+     </div>
+     <div class="eval_content">{{v.comContent}}</div>
+    </li>
+
+   {{/each}}
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/Template/template-web.js"></script>
+  <script src="./js/commen.js"></script>
+  <script src="./js/bj_productlist.js"></script>
+ </body>
+
+</html>

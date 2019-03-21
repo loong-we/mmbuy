@@ -1,0 +1,128 @@
+// 导入normalize 对所有浏览器样式统一
+@import "normalize.less";
+
+// 导入base，在normalize的基础上进行定制，完成对一些样式的重置
+@import "base.less";
+
+// 使用 flexible 完成的rem适配
+@desgin: 750;
+@base:75rem;
+
+// 慢慢橙
+@mmColor:#FF841D;
+
+
+.mm_container{
+ width: 100%;
+//  height: 5000/@base;
+ background-color: #fff;
+ padding-top: 100/@base;
+
+
+}
+a:hover,
+a:active,
+a:visited,
+a:link{
+ text-decoration: none;
+ color: #fff;
+}
+
+ul{
+ list-style: none;
+}
+
+// 表头
+@import "commens/header.less";
+
+// 搜索栏
+@import "commens/search.less";
+
+// 尾部模块
+@import "commens/foot.less";
+
+
+
+.sm_header{
+  background-color: @mmColor;
+}
+
+.first_brand{
+  // margin-top: 2/@base;
+  background-color: #fff;
+  padding-bottom: 50/@base;
+  >ul{
+   // height: 500/@base;
+   border-top: 2/@base solid #CBCBCB;
+   border-radius: 10/@base;
+   overflow: hidden;
+   background-color: #EFEFEF;
+   .first{
+    width: 100%;
+    height: 82/@base;
+    line-height: 82/@base;
+    padding-left: 30/@base;
+    color: #000629;
+    border-bottom: 2/@base solid #CBCBCB;
+    i{
+     width: 80/@base;
+     height: 80/@base;
+     text-align: center;
+     font-size: 30/@base;
+     color: #696969;
+     transform: scale(1.4,0.9) rotate(90deg);
+     }
+    }
+  }
+ } 
+
+
+ .bj_nav{
+  height: 76/@base;
+  line-height: 76/@base;
+  padding-left: 20/@base;
+  width: 100%;
+  border-top: 2px solid #CECECE;
+  border-bottom: 2px solid #CECECE;
+  background-color: #F0F0F0;
+  li{
+   color: #000;
+   float: left;
+   padding: 0 5/@base;
+   a{
+     width: 100%;
+     height: 100%;
+    display: block;
+    color: #000;
+   }
+  }
+  button{
+   margin-top: 8/@base;
+   float: right;
+   margin-right: 14/@base;
+   width: 124/@base;
+   height: 58/@base;
+   line-height: 58/@base;
+   border-radius: 10/@base;
+   background-color: #ECECEC;
+   box-shadow: 0 0 2/@base 2/@base #B2B2B2;
+   color: #000;
+   -webkit-tap-highlight-color: transparent;
+  }
+ }
+
+ .hot_brand{
+   padding: 20/@base 20/@base;
+   background-color: #fff;
+   p{
+    height: 80/@base;
+    line-height: 80/@base;
+    padding-left: 20/@base;
+    border: 2/@base solid #CBCBCB;
+    font-size: 34/@base;
+    color: #834127;
+    background-color: #EEEEEE;
+   }
+ }
+
+

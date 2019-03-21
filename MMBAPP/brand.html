@@ -1,0 +1,202 @@
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+
+
+    <link rel="stylesheet" href="./css/brand.css">
+    <script src="./lib/flexible/flexible.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="mm_container">
+      <!-- 表头 -->
+      <div class="mm_header">
+        <!-- 右边固定，左边自适应 -->
+        <div class="app"><a href="#"></a></div>
+        <div class="title"><a href="#"></a></div>
+      </div>
+
+
+
+      <!-- 搜索栏 -->
+      <div class="mm_search">
+        <!-- 右边固定，左边自适应 -->
+        <div class="enter">
+          <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search">
+          <button>搜索</button>
+        </div>
+      </div>
+
+
+      <div class="bj_list">
+        <!-- 导航条 -->
+        <div class="bj_nav">
+          <ol class="clearfix">
+            <li><a href="./index.html">首页></a></li>
+            <li><a href="./brandTitle.html">全部分类></a></li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- 热门品牌 -->
+      <div class="hot_brand"><span>平板电脑</span>哪家好</div>
+
+      <!-- 菜单 -->
+      <div class="ten_brand">
+        <ul>
+          <!-- 坑 -->
+          <!-- <li class="clearfix">
+            <div class="ten_box">1</div>
+            <i class="fr">></i>
+            <h3>三星平板电视</h3>
+            <p>三天全网销售50000件</p>
+          </li> -->
+        </ul>
+      </div>
+
+      <!-- 销量 -->
+      <div class="hot_brand"><span>平板电脑</span>产品销量排行</div>
+
+      <!-- 排行榜 -->
+      <div class="top_brand">
+        <ul>
+          <!-- <li>
+            <div class="top_left">
+              <img src="./images/categorylist.jpg" alt="">
+            </div>
+            <div class="top_right">
+              <div class="top_datail">凤凰台上凤凰游，凤去台空江自流,凤凰台上凤凰游，凤去台空江自流</div>
+              <p class="top_price">￥1999</p>
+              <div class="top_content">报价<span>评论</span></div>
+            </div>
+
+          </li> -->
+        </ul>
+      </div>
+
+      <!-- 讨论 -->
+      <div class="hot_brand"><span>平板电脑</span>最新评论</div>
+
+      <!-- 最新 -->
+      <div class="new_brand">
+        <ul>
+          <!-- 挖个大坑 -->
+          <!-- <li class="clearfix">
+            <div class="new_content">
+              <div class="new_left">
+                <img src="./images/categorylist.jpg" alt="">
+              </div>
+              <div class="new_right">
+                凤凰台上凤凰游，凤去台空江自流,凤凰台上凤凰游，凤去台空江自流
+              </div>
+            </div>
+            <div class="new_comments">
+              <div class="new_name">
+                张三<span>2016</span>
+              </div>
+              <p>江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇江山如此多娇</p>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+
+
+      <!-- 底部 -->
+      <div class="mm_foot">
+        <div class="foot_sign fl">
+          <a href="#">登录</a>
+        </div>
+        <div class="foot_login fl">
+          <a href="#">注册</a>
+        </div>
+        <div class="toTop">
+          <a href="javascript:;"><i></i>返回顶部</a>
+        </div>
+
+        <!-- 结尾 -->
+        <div class="mm_end">
+          <p class="end_p"><span>手机APP下载</span> 慢慢买手机版<i>--掌上比较平台</i></p>
+          <p>m.manmanbuy.com</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 十大菜单的模板 -->
+    <script type="text/html" id="ten_brand">
+   {{each result v i}}
+    <li class="clearfix" data-id="{{v.brandId}}">
+      {{if i ==0}}
+      <div class="ten_box red">{{i+1}}</div>
+      {{else if i ==1}}
+      <div class="ten_box orange">{{i+1}}</div>
+      {{else if i==2}}
+      <div class="ten_box lime">{{i+1}}</div>
+      {{else}}
+      <div class="ten_box">{{i+1}}</div>
+      {{/if}}
+      <i class="fr">></i>
+      <h3>{{v.brandName}}</h3>
+      <p>{{v.brandInfo}}</p>
+    </li>
+   {{/each}}
+  </script>
+
+    <!-- 排行榜的模板 -->
+    <script type="text/html" id="top_brand">
+      {{each result v i}}
+      <li data-id="{{v.productId}}" class="clearfix">
+        <div class="top_left">
+          {{@v.productImg}}
+        </div>
+        <div class="top_right">
+          <div class="top_datail">{{v.productName}}</div>
+          <p class="top_price">{{v.productPrice}}</p>
+          <div class="top_content">{{v.productQuote}}<span>{{v.productCom}}</span></div>
+        </div>
+    
+      </li>
+      {{/each}}
+     </script>
+
+    <!-- 最新评论的模板 -->
+    <script type="text/html" id="new_brand">
+      {{each result v i}}
+      <li class="clearfix">
+          <div class="new_content">
+            <div class="new_left">
+                {{@src}}
+            </div>
+            <div class="new_right">
+              凤凰台上凤凰游，凤去台空江自流,凤凰台上凤凰游，凤去台空江自流
+            </div>
+          </div>
+          <div class="new_comments">
+            <div class="new_name">
+              {{v.comName}}<span>{{v.comTime}}</span>
+            </div>
+            <p>{{v.comContent}} {{v.comFrom}}</p>
+            <div class="new_corner"></div>
+          </div>
+        </li>
+  
+      {{/each}}
+     </script>
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+
+    <script src="./js/commen.js"></script>
+    <script src="./js/brand.js"></script>
+  </body>
+
+</html>
